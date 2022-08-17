@@ -1,0 +1,1043 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Barriecito&family=Calligraffitti&family=Caveat&family=El+Messiri&family=Grape+Nuts&family=Hurricane&family=Kufam&family=Lavishly+Yours&family=Libre+Franklin:wght@300&family=Lobster&family=Poiret+One&family=Praise&family=Rubik+Microbe&family=Sacramento&family=Satisfy&family=Splash&family=Stint+Ultra+Condensed&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital,wght@0,500;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Barriecito&family=Calligraffitti&family=Caveat&family=El+Messiri&family=Grape+Nuts&family=Hurricane&family=Kufam&family=Libre+Franklin:wght@300&family=Lobster&family=Poiret+One&family=Praise&family=Rubik+Microbe&family=Sacramento&family=Satisfy&family=Splash&family=Stint+Ultra+Condensed&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital,wght@0,500;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Barriecito&family=Caveat&family=El+Messiri&family=Grape+Nuts&family=Hurricane&family=Kufam&family=Lobster&family=Poiret+One&family=Praise&family=Rubik+Microbe&family=Sacramento&family=Shizuru&family=Stint+Ultra+Condensed&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital,wght@0,500;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Barriecito&family=Caveat&family=El+Messiri&family=Grape+Nuts&family=Hurricane&family=Kufam&family=Lobster&family=Poiret+One&family=Praise&family=Rubik+Microbe&family=Sacramento&family=Satisfy&family=Shizuru&family=Stint+Ultra+Condensed&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital,wght@0,500;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Barriecito&family=Calligraffitti&family=Caveat&family=El+Messiri&family=Grape+Nuts&family=Homemade+Apple&family=Hurricane&family=Kufam&family=Lavishly+Yours&family=Libre+Franklin:wght@300&family=Lobster&family=Mrs+Saint+Delafield&family=Poiret+One&family=Praise&family=Rubik+Microbe&family=Sacramento&family=Satisfy&family=Shadows+Into+Light+Two&family=Smooch&family=Splash&family=Square+Peg&family=Stint+Ultra+Condensed&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital,wght@0,500;1,400;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* --------------------------------------------------------- */
+
+/* navbar styleing */
+.navbar {
+    /* background: #2F8F9D; */
+    position: fixed;
+    padding: 30px 0;
+    width: 100%;
+    z-index: 999;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    /* background: #152D35; */
+    background: #fff;
+    padding: 15px 0;
+    box-shadow:2px 2px 10px #383838;
+    /* color: #111; */
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Square Peg', cursive;
+    /* font-family: 'Splash', cursive; */
+    letter-spacing: 6px;
+    
+}
+.navbar.sticky .logo a{
+    color: #111;
+    font-family: 'Splash', cursive;
+}
+.navbar .logo a span {
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* .navbar.sticky .logo a span {
+    color: #fff;
+    color: #111;
+} */
+
+.navbar .logo a:hover {
+    color: #F05454;
+    /* transform: scale(1.05); */
+    transition: all 0.3s ease;
+}
+
+.navbar .menu li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    /* color: #111; */
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+
+}
+
+.navbar .menu li a:hover {
+    color: #F05454;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #383838;
+
+}
+.navbar.sticky .menu li a {
+    color: #111;
+}
+.navbar.sticky .menu li a:hover {
+    color: #73777B;
+    
+}
+/* --------------------------------------------------------- */
+
+
+/* menu btn styling */
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #F05454;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 50%;
+    pointer-events: auto;
+}
+
+
+/* --------------------------------------------------------- */
+
+/* home section syling */
+
+.home {
+    display: flex;
+    background:linear-gradient(435deg, rgba(1, 6, 21, 0.873) 50%, transparent 50%), url("images/banner.webp") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width {
+    /* margin: auto 0 auto 40px; */
+    width: 100%;
+  display: flex;
+}
+.home .max-width .row{
+    margin-right: 0;
+  }
+.home .home-content .text-1 {
+    font-size: 25px;
+
+}
+
+.home .home-content .text-2 {
+    font-size: 59px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 35px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: #F05454;
+    font-weight: 500;
+}
+
+.home .home-content a {
+    color: #fff;
+    background: none;
+    display: inline-block;
+    /* background: #2F8F9D;
+    color: #fff; */
+    font-size: 20px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    /* border-radius: 6px; */
+    border: 2px solid #F05454;
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover {
+    color: #fff;
+    background: #F05454;
+}
+
+
+
+/* --------------------------------------------------------- */
+
+
+/* ALL SIMILAR CONTENT STYLING */
+section {
+    padding: 100px 0;
+}
+.about, .services, .skills, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+.about .about-content,
+.services .serv-content, .skills .skills-content, .contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title::after {
+
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: #F05454;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+
+/* --------------------------------------------------------- */
+
+
+/* about section styling */
+
+.about .title::after {
+    content: "Who I am";
+}
+
+.about .about-content .left {
+    width: 45%;
+}
+
+.about .about-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    /* border-radius: 6px; */
+    border: 1px solid #111;
+    box-shadow:6px 6px 7px #b3b3b3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+/* .about .about-content .left .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+    visibility: hidden;
+    transition: all 0.5s;
+    transform: scale(0);
+  } */
+  
+
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span {
+    color: #F05454;
+
+}
+
+.about .about-content .right p {
+    text-align: justify;
+    height: 100%;
+    line-height: 26px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #383838;
+    letter-spacing: 0.8px;
+    
+}
+
+.about .about-content .right button {
+    color: #fff;
+    background: #111;
+    display: inline-block;
+    /* background: #2F8F9D;
+    color: #fff; */
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 30px;
+    margin-top: 20px;
+    /* border-radius: 6px; */
+    border: 2px solid #111;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.about .about-content .right button:hover {
+    color: #383838;
+    background: none;
+}
+
+
+
+/* RESUME SECTION STYLING
+.resume {
+    display: flex;
+    height: 100vh;
+    min-height: 500px;
+    color: #fff;
+    background: #111;
+    padding: auto;
+    background: linear-gradient(435deg, rgba(0,0,0,0.5) 50%, transparent 50%), url('images/banner-6.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.resume .title::before {
+    background: #fff;
+}
+
+.resume .title::after {
+    background: #111;
+    content: "See my Details";
+}
+
+.resume .res-content .column-left {
+    position:relative;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    text-align: center;
+    
+    cursor: pointer;
+    transition: all 0.3s ease;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------- */
+
+
+/* SERIVICES SECTION STYLING */
+.services {
+    display: flex;
+    height: 100vh;
+    min-height: 500px;
+    color: #fff;
+    /* background: #111; */
+    background: linear-gradient(435deg, rgba(0,0,0,0.5) 50%, transparent 50%), url('images/banner-4.jpg') no-repeat center;
+    background-size: cover;
+    /* opacity: 2-; */
+}
+
+.services .title::before {
+    background: #fff;
+}
+
+.services .title::after {
+    background: #c9cec8;
+    content: "What I do";
+}
+
+.services .serv-content .card {
+    width: calc(33% - 20px);
+    background: #fff;
+    text-align: center;
+    /* border-radius: 6px; */
+    /* border:2px solid #383838; */
+    /* border-style: double; */
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover {
+    /* background: #383838; */
+    /* color: #111; */
+    transform: scale(1.09);
+    /* border-style: double 2px #111; */
+}
+.services .serv-content .card::before{
+    width: 100%;
+    height: 0;
+    border-width: 0 2px;
+    top: 50%;
+    transform: translate(-1px, -50%);
+}
+.services .serv-content .card::after{
+    position: absolute;
+    content: "";
+    /* border-style: double 2px #111; */
+    width: 100%;
+    height: 100%;
+    border-width:2px 0;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -1px);
+}
+.services .serv-content .card .box {
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover .box {
+    /* transform: scale(1.05); */
+    border-style: double 2px #111;
+}
+
+.services .serv-content .card i {
+    font-size: 33px;
+    color: #111;
+    transition: color 0.3s ease;
+}
+
+.services .serv-content .card:hover i{
+    color: #F05454;
+}
+.services .serv-content .card .text {
+    color: #111;
+    font-size: 20px;
+    font-weight: 550;
+    margin: 10px 0 7px 0;
+    line-height: 26px;
+    font-family: "Raleway", sans-serif;
+    /* font-size: 14px; */
+    /* font-weight: 400; */
+    /* color: #383838; */
+    /* letter-spacing: 0.8px; */
+}
+.services .serv-content .card:hover .text{
+    color: #F05454;
+    /* text-decoration:overline #F05454 2px; */
+    /* text-shadow: 2px 2px #F05454; */
+
+}
+.services .serv-content .card p {
+    text-align: justify;
+    height: 100%;
+    line-height: 26px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #383838;
+    /* letter-spacing: px; */
+}
+.services .serv-content .card:hover p{
+    color: #111;
+}
+
+
+/* --------------------------------------------------------- */
+
+/* SKILLS SECTION STYLING */
+.skills .title::after{
+    content: "What I Know";
+}
+
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text{
+    /* font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px; */
+    color: #111;
+    font-size: 20px;
+    font-weight: 550;
+    margin: 10px 0 7px 0;
+    line-height: 26px;
+    font-family: "Raleway", sans-serif;
+}
+.skills .skills-content .left p{
+    text-align: justify;
+    height: 100%;
+    line-height: 26px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #383838;
+}
+.skills .skills-content .left button{
+    color: #fff;
+    background: #111;
+    display: inline-block;
+    /* background: #2F8F9D;
+    color: #fff; */
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 30px;
+    margin-top: 20px;
+    /* border-radius: 6px; */
+    border: 2px solid #111;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.skills .skills-content .left button:hover {
+    color: #383838;
+    background: none;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    background: #F05454;
+    
+}
+
+.skills .skills-content .right .c::before{
+    width: 70%;
+}
+
+.skills .skills-content .right .java::before{
+    width: 60%;
+}
+.skills .skills-content .right .html::before{
+    width: 80%;
+}
+.skills .skills-content .right .dsa::before{
+    width: 50%;
+}
+
+
+/* RESUME SECTION STYLING */
+.resume {
+    display: flex;
+    height: 100vh;
+    min-height: 500px;
+    color: #fff;
+    /* background: #111; */
+    background: linear-gradient(435deg, rgba(0,0,0,0.5) 50%, transparent 50%), url('images/banner-4.jpg') no-repeat center;
+    background-size: cover;
+    /* opacity: 2-; */
+}
+
+.resume .title::before {
+    background: #fff;
+}
+
+.resume .title::after {
+    background: #c9cec8;
+    content: "What I do";
+}
+
+.resume .res-content .card {
+    /* width: calc(33% - 20px); */
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    /* border-radius: 6px; */
+    /* border:2px solid #383838; */
+    /* border-style: double; */
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.resume .res-content .card:hover {
+    /* background: #383838; */
+    /* color: #111; */
+    transform: scale(1.09);
+    /* border-style: double 2px #111; */
+}
+.resume .res-content .card::before{
+    width: 100%;
+    height: 0;
+    border-width: 0 2px;
+    top: 50%;
+    transform: translate(-1px, -50%);
+}
+.resume .res-content .card::after{
+    position: absolute;
+    content: "";
+    /* border-style: double 2px #111; */
+    width: 100%;
+    height: 100%;
+    border-width:2px 0;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -1px);
+}
+.resume .res-content .card .box {
+    transition: all 0.3s ease;
+}
+
+.services .res-content .card:hover .box {
+    /* transform: scale(1.05); */
+    border-style: double 2px #111;
+}
+
+.resume .res-content .card i {
+    font-size: 33px;
+    color: #111;
+    transition: color 0.3s ease;
+}
+
+.resume .res-content .card:hover i{
+    color: #F05454;
+}
+.resume .res-content .card .text {
+    color: #111;
+    font-size: 20px;
+    font-weight: 550;
+    margin: 10px 0 7px 0;
+    line-height: 26px;
+    font-family: "Raleway", sans-serif;
+    /* font-size: 14px; */
+    /* font-weight: 400; */
+    /* color: #383838; */
+    /* letter-spacing: 0.8px; */
+}
+/* .resume .res-content .card .text h3{
+    font-size: large;
+    display: inline;
+} */
+.resume .res-content .card:hover .text{
+    color: #F05454;
+    /* text-decoration:overline #F05454 2px; */
+    /* text-shadow: 2px 2px #F05454; */
+
+}
+.resume .res-content .card p {
+    text-align: justify;
+    height: 100%;
+    line-height: 26px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #383838;
+    /* letter-spacing: px; */
+}
+.resume .res-content .card:hover p{
+    color: #111;
+}
+
+/* CONTACT SECTION STYLING */
+.contact .title::after{
+    content: "Get in Touch";
+
+}
+
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: "Raleway", sans-serif;
+}
+
+.contact .contact-content .left p{
+    text-align: justify;
+    height: 100%;
+    line-height: 26px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #383838;
+}
+
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info{
+    margin-left: 23px;
+    font-family: "Raleway", sans-serif;
+}
+
+.contact .contact-content .row i{
+    font-size: 20px;
+    color: #F05454;
+
+}
+/* .contact .contact-content .info .head{
+    font-weight: 700;
+
+} */
+
+.contact .contact-content .info .sub-title{
+    color: #111;
+}
+
+.contact .right form .fields{
+    display: flex;
+}
+
+.contact .right form .field, .contact .right form .fields .field{
+   height: 45px;
+   width: 100%;
+   margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .email{
+    margin-left: 10px;
+}
+.contact .right form .field input, .contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #383838;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: "Raleway", sans-serif;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus{
+    border-color: #b3b3b3;
+}
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+    height: 47px;
+    width: 170px;
+}
+.contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: #111;
+    display: inline-block;
+    font-family: 'Ubuntu', sans-serif;
+    /* background: #2F8F9D;
+    color: #fff; */
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    /* border-radius: 6px; */
+    border: 2px solid #111;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+
+    
+}
+
+.contact .right form .button button:hover{
+    color: #111;
+    background: none;
+}
+
+
+
+/* FOOTER SECTION STYLING  */
+footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: #F05454;
+    text-decoration: none;
+
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+
+/* responsive media query start */
+/* @media(max-width: 1300px) {
+    .home .max-width {
+        margin-left: 0px;
+
+    }
+} */
+
+@media(max-width: 1104px) {
+    .about .about-content .left img {
+        height: 350px;
+        width: 350px;
+
+    }
+}
+
+@media(max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+}
+
+@media(max-width: 947px) {
+
+
+    .menu-btn {
+
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 70px;
+
+    }
+
+    .home .home-content .text-3 {
+        font-size: 35px;
+
+    }
+
+    .home .home-content a {
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+
+    .max-width {
+        max-width: 930px;
+
+    }
+
+    .about .about-content .column {
+        width: 100%;
+    }
+
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .right {
+        flex: 100%;
+    }
+
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column, .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media(max-width: 690px) {
+    .max-width {
+        padding: 0 23px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 60px;
+
+    }
+
+    .home .home-content .text-3 {
+        font-size: 32px;
+
+    }
+
+    .home .home-content a {
+        font-size: 20px;
+        /* padding: 8px 28px; */
+    }
+    .services .serv-content .card{
+        width: 100%;
+        /* margin-bottom: 20px; */
+    }
+
+}
+
+@media(max-width: 500px) {
+
+    .home .home-content .text-2 {
+        font-size: 50px;
+
+    }
+
+    .home .home-content .text-3 {
+        font-size: 27px;
+
+    }
+
+    .home .home-content a {
+        font-size: 18px;
+        padding: 6px 26px;
+    }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .right form .error-box{
+       width: 150px;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
+
+/* h3{
+    display: inline;
+} */
